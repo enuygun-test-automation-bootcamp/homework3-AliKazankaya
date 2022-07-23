@@ -8,6 +8,7 @@ public class BrowserFactory {
 
 
     public static WebDriver startapplication(WebDriver driver, String BrowserName, String appURL) {
+        // Here select Browser Typees
         if (BrowserName.equals("Chrome")) {
             System.setProperty("webdriver.chrome.driver", "./Drivers/chromedriver.exe");
             driver = new ChromeDriver();
@@ -18,7 +19,7 @@ public class BrowserFactory {
         } else {
             System.out.println("Sorry this browser is not supported !!");
         }
-
+         // Some Options of our browser.
         driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
         driver.manage().window().maximize();
         driver.get(appURL);

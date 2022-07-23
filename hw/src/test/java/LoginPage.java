@@ -6,8 +6,9 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 public class LoginPage {
 
+    // Driver set up
 WebDriver driver = new ChromeDriver();
-WebElement button ;
+
 // E mail Locator
     WebElement username = driver.findElement(By.name("_email"));
 // Password Locator
@@ -15,9 +16,9 @@ WebElement button ;
 
     public void loginto(String usrnme, String pswrd)
     {
-        driver.findElement(By.id("ctx-LoginBtn")).click();
-        username.sendKeys(usrnme);
-        password.sendKeys(pswrd);
-        driver.findElement(By.cssSelector("span.MuiButton01222"));
+        driver.findElement(By.id("ctx-LoginBtn")).click(); // Home-Page Log in locator
+        username.sendKeys(usrnme); // username
+        password.sendKeys(pswrd);   // password
+        driver.findElement(By.cssSelector("span.MuiButton01222")); // Log-in locator
     }
 }
