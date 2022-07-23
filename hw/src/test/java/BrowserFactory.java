@@ -8,7 +8,7 @@ public class BrowserFactory {
 
 
     public static WebDriver startapplication(WebDriver driver, String BrowserName, String appURL) {
-        // Here select Browser Typees
+        // Here Select Browser Types
         if (BrowserName.equals("Chrome")) {
             System.setProperty("webdriver.chrome.driver", "./Drivers/chromedriver.exe");
             driver = new ChromeDriver();
